@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Recommend-o-master</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js"></script>
+	<title>Recommend-o-master</title>
+<style>
+    .dataframe {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    .dataframe td, .dataframe th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    .dataframe tr:nth-child(even){background-color: #f2f2f2;}
+    
+    .dataframe tr:hover {background-color: #ddd;}
+    
+    .dataframe th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+    .navbar {
+  background-color: #4CAF50;
+  overflow: hidden;
+}
+    .navbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    }
+</style>
+</head>
+<body>
+	<nav class="navbar" >
+  <a class="navbar-brand" href="/">Product Recommendation System</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+</nav>
+<br>
+<br>
+<br>
+	<h1 style="text-align:center;"> Product Recommendation System</h1>
+	 <h5 style="text-align:center;">Top 5 recommendations will appear here!!!</h5>
+	<!--<p style="text-align:center;">Buzz Lightyear Boy's Deluxe Toy Story Costume</p>
+	<p style="text-align:center;">Long Satin Bandage Evening Gown Formal Bridesmaid Prom Dress Brooch</p>
+	<p style="text-align:center;">U.S. Polo Assn. Men's Short Snorkel Jacket</p>
+	<p style="text-align:center;">Fairy Tale Jewelry Box</p>
+    <p style="text-align:center;">Secret Wishes Star Wars Princess Leia Prisoner Adult Costume</p>
+    -->
+	<form action="/" method = "Post">
+		<p style="text-align:center;">
+			<label for="UserName"><b>Username</b></label><br>
+			<input type="text" name="userid">
+		</p>
+		<p style="text-align:center;"><button type="submit">Submit</button></p>
+    </form> 
+    {%if flag == True%}
+    {{data|safe}}
+    {%endif%}
+      
+</body>
+</html>
